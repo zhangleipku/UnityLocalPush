@@ -18,7 +18,10 @@ public class LocalPush : MonoBehaviour {
 //		notif.fireDate = DateTime.Now.AddHours(24);
 		notif.fireDate = DateTime.Now.AddSeconds(6);
 
-		notif.alertBody = "You’ve generated more coins! Come back and play!";
+		notif.alertBody = "Cybirdの目覚ましです。早く起きなさい！";
+
+//		notif.soundName = UnityEngine.iOS.LocalNotification.defaultSoundName;
+		notif.soundName = "guruguru.wav";
 
 		UnityEngine.iOS.NotificationServices.ScheduleLocalNotification(notif);
 	}
